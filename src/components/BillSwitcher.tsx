@@ -8,7 +8,11 @@ const BillSwitcher = () => {
         setselectedBill((prev) => (prev === "yearly" ? "monthly" : "yearly"))
       }
       type="button"
-      className={`relative hover:bg-strong-cyan transition outline-none px-8 py-4 max-md:py-3 max-md:px-6 rounded-full bg-light-grayish-blue-toggle `}
+      className={`relative hover:bg-strong-cyan transition outline-none px-8 py-4 max-md:py-3 max-md:px-6 rounded-full ${
+        selectedBill === "yearly"
+          ? "bg-strong-cyan"
+          : "bg-light-grayish-blue-toggle"
+      } `}
     >
       <span
         className={`absolute transition-all rounded-full top-1/2 ${
