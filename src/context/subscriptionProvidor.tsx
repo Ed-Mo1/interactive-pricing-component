@@ -14,7 +14,7 @@ interface Subscription {
 }
 export const SubscriptionContext = createContext<Subscription>({
   plans: [],
-  selectedPlan: { pageviews: 0, price: 0 },
+  selectedPlan: { pageviews: 100000, price: 16 },
   selectedBill: "yearly",
   setSelectedPlan: (): void => {},
   setselectedBill: (): void => {},
@@ -32,7 +32,7 @@ const SubscriptionProvidor = ({ children }: { children: React.ReactNode }) => {
     { pageviews: 1000000, price: 36 },
   ];
   const [selectedPlan, setSelectedPlan] = useState<Plan>(plans[2]);
-   
+
   return (
     <SubscriptionContext.Provider
       value={{

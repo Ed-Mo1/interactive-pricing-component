@@ -1,8 +1,11 @@
 import { useContext, useState } from "react";
 import { SubscriptionContext } from "../context/subscriptionProvidor";
 const RangeInput = () => {
-  const { setSelectedPlan, plans } = useContext(SubscriptionContext);
-  const [value, setValue] = useState<number>(0);
+  const { setSelectedPlan, selectedPlan, plans } =
+    useContext(SubscriptionContext);
+  const [value, setValue] = useState<number>(
+    plans.findIndex((plan) => selectedPlan.price === plan.price)
+  );
   const bg = `linear-gradient(
     to right,
     rgb(165, 243, 235) 0%,
