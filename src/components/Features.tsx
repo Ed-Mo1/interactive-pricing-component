@@ -10,13 +10,16 @@ const Features = () => {
     <div className="flex justify-between items-center max-md:flex-col gap-y-5 max-md:justify-center">
       <ul className="space-y-3">
         {features.map((feature) => (
-          <li key={feature} className="flex max-md:justify-center items-center gap-2">
+          <li
+            key={feature}
+            className="flex max-md:justify-center items-center gap-2"
+          >
             <IoCheckmarkSharp className="text-2xl text-strong-cyan" />
-            <span>{feature}</span>
+            <span className="text-grayish-blue">{feature}</span>
           </li>
         ))}
       </ul>
-      <button className="bg-dark-desaturated-blue font-extrabold text-white px-8 py-4 rounded-full">
+      <button className="bg-dark-desaturated-blue font-extrabold text-pale-blue px-8 py-4 rounded-full">
         Start my trial
       </button>
     </div>

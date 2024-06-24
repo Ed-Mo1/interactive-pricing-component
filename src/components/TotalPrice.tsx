@@ -11,7 +11,9 @@ const TotalPrice = () => {
           ? selectedPlan.price * 12 - selectedPlan.price * 12 * 0.25
           : selectedPlan.price}
       </span>
-      <span className="text-grayish-blue">/ month</span>
+      <span className="text-grayish-blue">
+        / {selectedBill === "yearly" ? "year" : "month"}
+      </span>
     </div>
   );
 };
